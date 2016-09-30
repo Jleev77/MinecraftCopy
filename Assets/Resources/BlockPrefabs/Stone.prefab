@@ -23,7 +23,7 @@ GameObject:
   - 65: {fileID: 65000013072432550}
   - 23: {fileID: 23000013710008326}
   m_Layer: 0
-  m_Name: BlockDirt 1
+  m_Name: Stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55,7 +55,7 @@ MeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 300346b645d8e03408aa9301d002fd89, type: 2}
+  - {fileID: 2100000, guid: ace4718868393954da7654cba97d34f5, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
