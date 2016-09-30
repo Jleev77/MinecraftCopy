@@ -1,8 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
-using Assets.GameData;
+using Assets.Scripts;
+using System.Collections.Generic;
 
 public class TestScript : MonoBehaviour {
+
+    List<string> blockNames = new List<string>() { "Dirt", "Stone", "Gravel" };
+
     float time = 0f;
     int x = 0;
 	// Use this for initialization
@@ -18,16 +22,10 @@ public class TestScript : MonoBehaviour {
         {
             time = 0f;
             x++;
-            TestFactory.GenerateBlockDirt(x, 0, 0);
-            TestFactory.GenerateBlockDirt(x, 1, 0);
-            TestFactory.GenerateBlockDirt(x, 2, 0);
-            TestFactory.GenerateBlockDirt(x, 3, 0);
-            TestFactory.GenerateBlockDirt(x, 4, 0);
-            TestFactory.GenerateBlockDirt(x, 5, 0);
-            TestFactory.GenerateBlockDirt(x, 6, 0);
-            TestFactory.GenerateBlockDirt(x, 7, 0);
-            TestFactory.GenerateBlockDirt(x, 8, 0);
-            TestFactory.GenerateBlockDirt(x, 9, 0);
+            for (int y = 0; y < 10; y++)
+            {
+                TestFactory.GenerateBlockDirt(blockNames[Random.Range(0, blockNames.Count)], new Vector3(x, y), this.transform);
+            }
 
         }
     }
