@@ -24,7 +24,7 @@ public class TestScript : MonoBehaviour {
             x++;
             for (int y = 0; y < 10; y++)
             {
-                TestFactory.GenerateBlockDirt(blockNames[Random.Range(0, blockNames.Count)], new Vector3(x, y), this.transform);
+                TestFactory.GenerateBlock(blockNames[Random.Range(0, blockNames.Count)], new Vector3(x, y), this.transform);
             }
 
         }
