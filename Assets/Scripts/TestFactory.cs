@@ -17,7 +17,7 @@ namespace Assets.Scripts
                 blockDictionary.Add(go.name, go);
             }
         }
-        public static void GenerateBlockDirt(string blockName, Vector3 position, Transform parent = null)
+        public static void GenerateBlock(string blockName, Vector3 position, Transform parent = null)
         {
             GameObject go = GameObject.Instantiate(blockDictionary[blockName]);
             go.transform.position = position;
