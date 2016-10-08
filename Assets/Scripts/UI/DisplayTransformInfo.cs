@@ -17,7 +17,6 @@ public class DisplayTransformInfo : MonoBehaviour {
         {
             Vector3 pos = transformInfo.position;
             text.text = string.Format("{0}({1}, {2}, {3})", transformInfo.gameObject.name, pos.x, pos.y, pos.z);
-            Debug.Log("Hit");
             transformInfo.hasChanged = false;
         }
 	}
