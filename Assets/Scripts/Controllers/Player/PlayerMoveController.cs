@@ -4,7 +4,7 @@ using System;
 
 public class PlayerMoveController : MonoBehaviour, IMoveController
 {
-    public Vector3 GetInput()
+    public Vector3 Movement()
     {
         Vector3 input = new Vector3();
         input.z = Input.GetAxisRaw("Vertical");

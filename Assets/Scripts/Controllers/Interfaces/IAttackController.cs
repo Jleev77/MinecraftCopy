@@ -1,0 +1,4 @@
+﻿interface IAttackController
+{
+    bool IsAttacking();
+}

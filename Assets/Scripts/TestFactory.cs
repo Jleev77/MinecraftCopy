@@ -22,6 +22,7 @@ namespace Assets.Scripts
             GameObject go = GameObject.Instantiate(blockDictionary[blockName]);
             go.name = blockName;
             go.transform.position = position;
+            go.AddComponent<OneShotAttackable>();
 
             if(parent != null)
             {

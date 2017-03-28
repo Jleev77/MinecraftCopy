@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(CharacterController)), RequireComponent(typeof(IMoveController))]
+[RequireComponent(typeof(IMoveController))]
 public class Mover : MonoBehaviour {
 
     public float AirSpeed = 1f;
@@ -19,13 +19,18 @@ public class Mover : MonoBehaviour {
     public void Start()
     {
         _moveController = GetComponent<IMoveController>();
-        _characterController = GetComponent<CharacterController>();
+
+        _characterController = GetComponentInParent<CharacterController>();
+        if(_characterController == null)
+        {
+            _characterController = transform.parent.gameObject.AddComponent<CharacterController>();
+        }
     }
 
 
     public void Update()
     {
-        Vector3 input = _moveController.GetInput();
+        Vector3 input = _moveController.Movement();
         Vector3 horizontalMove = (transform.forward * input.z) + (transform.right * input.x);
         horizontalMove *= Speed;
 

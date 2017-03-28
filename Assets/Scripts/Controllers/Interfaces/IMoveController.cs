@@ -6,5 +6,5 @@ using UnityEngine;
 
 interface IMoveController
 {
-    Vector3 GetInput();
+    Vector3 Movement();
 }
