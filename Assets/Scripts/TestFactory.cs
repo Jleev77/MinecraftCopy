@@ -20,6 +20,7 @@ namespace Assets.Scripts
         public static void GenerateBlock(string blockName, Vector3 position, Transform parent = null)
         {
             GameObject go = GameObject.Instantiate(blockDictionary[blockName]);
+            go.name = blockName;
             go.transform.position = position;
 
             if(parent != null)
