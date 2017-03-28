@@ -11,7 +11,7 @@ public class PlayerMouseLookController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        _camera = GetComponentInChildren<Camera>();
+        _camera = transform.parent.GetComponentInChildren<Camera>();
         _mouseLookProps = GetComponent<MouseLookProps>();
 	}
 	
@@ -25,7 +25,7 @@ public class PlayerMouseLookController : MonoBehaviour {
         _camera.transform.Rotate(new Vector3(-_input.y * _mouseLookProps.RotateSpeed, 0));
         _camera.transform.localRotation = ClampRotationAroundXAxis(_camera.transform.localRotation);
 
-        transform.Rotate(new Vector3(0, _input.x * _mouseLookProps.RotateSpeed));
+        transform.parent.Rotate(new Vector3(0, _input.x * _mouseLookProps.RotateSpeed));
 
     }
 
